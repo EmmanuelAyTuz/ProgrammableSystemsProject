@@ -1,0 +1,96 @@
+<!-- 
+  Sistemas programables
+  Domotica
+  ITSVA
+-->
+<!DOCTYPE html>
+<html lang="es-mx">
+
+<head>
+    <title>ITSVA</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js"></script>
+</head>
+
+<body onload="getVal()">
+    <div class="container">
+        <center>
+            <img src="img/i.png" alt="logo_tec" width="175" height="174">
+            <h1>SISTEMAS PROGRAMABLES</h1>
+            <br>
+            <h2>Cortinas</h2>
+            <div class="btn-group">
+                <a id="btnon0" href='?on=0' class="btn-stylist text-uppercase btn-stylist-green"
+                    onclick="saveBtn(this.id)">Abrir</a>
+                <a id="btnoff0" href='?off=0' class="btn-un-stylist text-uppercase btn-stylist-red"
+                    onclick="saveBtn(this.id)">Cerrar</a>
+            </div>
+            <div class="clearfix"></div>
+            <br>
+            <h2>Ventilador</h2>
+            <div class="row">
+                <div class="col rngs">
+                    <div class="range range-primary">
+                        <input id="ventilator" type="range" name="rangeVent" min="0" max="140" step="35"
+                            onchange="rangeVent.value=value" onclick="/*sendValueAuto()*/">
+                        <output id="rangeVent"></output>
+                    </div>
+                    <br>
+                    <div class="btn-group">
+                        <a id="data-vent" href="" class="btn-cen-stylist text-uppercase btn-stylist-blue"
+                            onclick="sendValue(this.id, 'ventilator', '?venti=');">Ventilador</a>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <h2>Piscina: iluminación</h2>
+            <div class="btn-group">
+                <a id="btnon1" href='?on=1' class="btn-stylist text-uppercase btn-stylist-green"
+                    onclick="saveBtn(this.id)">Encender</a>
+                <a id="btnoff1" href='?off=1' class="btn-un-stylist text-uppercase btn-stylist-red"
+                    onclick="saveBtn(this.id)">Apagar</a>
+            </div>
+            <div class="clearfix"></div>
+            <br>
+            <div class=" clearfix"></div>
+            <br>
+            <h2>Principal: iluminación</h2>
+            <div class="btn-group">
+                <a id="btnon2" href='?on=2' class="btn-stylist text-uppercase btn-stylist-green"
+                    onclick="saveBtn(this.id)">Encender</a>
+                <a id="btnoff2" href='?off=2' class="btn-un-stylist text-uppercase btn-stylist-red"
+                    onclick="saveBtn(this.id)">Apagar</a>
+            </div>
+            <div class="clearfix"></div>
+            <br>
+            <h2>Entrada: iluminación </h2>
+            <div class="btn-group">
+                <a id="btnon3" href='?on=3' class="btn-stylist text-uppercase btn-stylist-green"
+                    onclick="saveBtn(this.id)">Encender</a>
+                <a id="btnoff3" href='?off=3' class="btn-un-stylist text-uppercase btn-stylist-red"
+                    onclick="saveBtn(this.id)">Apagar</a>
+            </div>
+            <div class="clearfix"></div>
+            <br>
+            <h2>Cuarto Grande: iluminación</h2>
+            <div class="row">
+                <div class="col rngs">
+                    <div class="range range-primary">
+                        <input id="light" type="range" name="rangeLight" min="0" max="250" step="25"
+                            onchange="rangeLight.value=value" onclick="/*sendValueAuto()*/">
+                        <output id="rangeLight"></output>
+                    </div>
+                    <br>
+                    <div class="btn-group">
+                        <a id="data-light" href="" class="btn-cen-stylist text-uppercase btn-stylist-blue"
+                            onclick="sendValue(this.id, 'light', '?light=');">Lampara</a>
+                    </div>
+                </div>
+            </div>
+        </center>
+    </div>
+</body>
+
+</html>
